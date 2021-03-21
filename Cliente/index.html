@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Personal</title>
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link rel="stylesheet" href="Css/estilos.css">
+    <!--Fuente-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400;700&display=swap" rel="stylesheet">
+    <!-- toastr css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    
+</head>
+
+<body onLoad="llenarTablaContactos()">
+
+    <main>
+
+        <h1 class="txt-center">Agenda Personal</h1>
+
+        <section class="contenedor">
+
+            <div class="side-bar">
+
+                <div class="cotenedor-formulario caja-contacto">
+
+                    <form name="frmContacto" method="POST" action="../Servidor/index.php">
+
+                        <div class="campos pd-1rem">
+                            <label for="f-txt-nombre">Nombre: </label>
+                            <input type="text" name="txtNombre" id="txt_nombre" class="campo"
+                                placeholder="Ingrese nombre">
+                        </div>
+
+                        <div class="campos pd-1rem">
+                            <label for="f-tel-fijo">Telefono fijo: </label>
+                            <input type="number" name="txtTelFijo" id="txt_tel_fijo" class="campo"
+                                placeholder="Ingrese telefono fijo">
+                        </div>
+
+                        <div class="campos pd-1rem">
+                            <label for="f-tel.cel">Telefono Ceular: </label>
+                            <input type="number" name="txtTelCel" id="txt_tel_cel" class="campo"
+                                placeholder="Ingrese telefono celular">
+                        </div>
+
+                        <div class="contenedor-boton">
+                          
+                            <!-- <input id="btn" type="button" class="boton" value="Agregar Contacto"> -->
+                          <!-- escribir bien las funciones -->
+                            <a onclick="registrarContacto()" class="boton">Agergar Contacto</a>
+                        </div>
+
+
+                    </form>
+
+                    <!--TABLA-->
+
+                </div>
+
+                <div class="contenedor-tabla">
+
+                    <table style="width:100%">
+
+                        <thead>
+
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Telefono Fijo</th>
+                                <th>Telefono Celular</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaContactos"> 
+
+                            <!-- <tr>
+                                <td>Jose</td>
+                                <td>Castellanos</td>
+                                <td>55444544499</td>
+                            </tr> -->
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- <script src="../js/index.js"></script> --> 
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/validaciones.js"></script>
+
+    <script>
+        function p (){
+            console.log('prueba index')
+        }
+    </script>
+    
+
+</body>
+
+</html>

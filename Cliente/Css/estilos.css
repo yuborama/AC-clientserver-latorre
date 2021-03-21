@@ -1,0 +1,141 @@
+/*Paleta de colores*/
+:root {
+    --blanco: #ffffff;
+    --azul: #3A5AB1;
+    --gris-oscuro: #2E373E;
+    --gris-claro:#D4D4D4;
+}
+
+/*Global*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Bellota Text', cursive;
+    background-color:var(--gris-claro);
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Tipografia*/
+
+h1{
+    font-weight: 700;    
+}
+
+/*Utilidades*/
+
+.txt-center{
+    text-align: center;
+}
+
+.pd-1rem{
+    padding: 1rem;
+}
+
+/*General*/
+
+.caja-contacto{
+    background-color: var(--blanco);
+    border-radius: 0.5rem; /*5 px*/
+}
+
+/*Contenedor*/
+
+@media (min-width: 768px) {
+    .side-bar{
+        display: grid; 
+        grid-template-columns: 1fr 2fr; /*1 fr para el form 2 fr para la tabla*/
+         
+        column-gap: 2rem; /*Distancia entre columnas*/
+        
+    }
+    .contenedor-tabla{
+        margin: 0;
+        width: 100%;
+    }
+
+}
+
+.cotenedor-formulario{
+    height: 37rem;
+    text-align: center;
+}
+
+/*Formulario*/
+
+.campos label{
+    font-weight: 700;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.campos input{
+    width: 40rem;
+}
+
+.campo{
+    padding: 1rem 0; /*darle mas altura a los campos*/
+}
+
+.contenedor-boton{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.boton{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color:var(--azul);
+    color: var(--blanco);
+    border: none;
+    transition: font-size .3s ease;
+}
+
+.boton:hover{
+    font-size: 2rem;
+}
+
+/*Tabla*/
+
+table{
+    background-color:var(--blanco);
+    border-collapse: collapse;
+    width: 100%;  
+    border: solid 1px black;;    
+    text-align: center; /*Centrar Encabezado*/
+}
+
+th,td{
+    padding: 1.5rem; /*Interlineado de 15 px entre cada fila*/
+    
+}
+
+/*Encabezado*/
+thead{ 
+    background-color: var(--gris-oscuro);
+    color: white;
+}
+
+tr:nth-child(even){ /*Bg de las filas*/
+    background-color:#ddd;
+    
+}
+
+/*Cambio de color cuando seleccione una fila
+tr:hover td{
+    background-color:var(--azul);
+    color: var(--blanco);
+}
+*/
+
+
